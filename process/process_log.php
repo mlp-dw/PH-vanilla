@@ -1,3 +1,4 @@
+
 <?php
 
 //on teste si tous les champs du formulaire sont remplits
@@ -10,6 +11,7 @@ if (
     include "../utils/connexion_bdd.php";
         
     // ON VERIFIE QUE LE PSEUDO N'EXISTE PAS DÉJà
+
     $pseudo = htmlspecialchars($_POST["pseudo"]);
     $password = htmlspecialchars($_POST["password"]);  
 
