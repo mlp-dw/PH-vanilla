@@ -7,6 +7,7 @@ if(
     )
     {
        
+
         // ON SE CONNECTE A LA BDD
         
         include "../utils/connexion_bdd.php";
