@@ -7,7 +7,9 @@ if(
     )
     {
        
-        include "../utils/connexionBDD.php";
+        // ON SE CONNECTE A LA BDD
+        
+        include "../utils/connexion_bdd.php";
         
         $pseudo = htmlspecialchars($_POST["pseudo"]);
         $password = htmlspecialchars($_POST["password"]); 
@@ -29,7 +31,7 @@ if(
         
     }
 else{
-    header("Location: ../login.php?error=Echec lors de la connexion");
+    header("Location: ../log.php?error=Echec lors de la connexion");
 
 }
 
