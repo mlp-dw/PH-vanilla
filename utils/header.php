@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +17,6 @@
         <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">
         Product hunt
         </a>
-        <h1>votre compte : </h1>
+        <h1>votre compte : <?= $_SESSION["pseudo"]?></h1>
     </div>
 </nav>
