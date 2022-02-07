@@ -15,5 +15,6 @@
         <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">
         Product hunt
         </a>
+        <h1>votre compte : </h1>
     </div>
 </nav>
