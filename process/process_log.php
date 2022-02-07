@@ -10,7 +10,8 @@ if (
     include "../utils/connexion_bdd.php";
         
     // ON VERIFIE QUE LE PSEUDO N'EXISTE PAS DÉJà
-    $pseudo = htmlspecialchars($_POST["pseudo"]);  
+    $pseudo = htmlspecialchars($_POST["pseudo"]);
+    $password = htmlspecialchars($_POST["password"]);  
 
     $pseudo_verification = $mysqlConnection->prepare("SELECT * FROM users WHERE pseudo = ?");
     $pseudo_verification->execute([$pseudo]);
@@ -24,8 +25,8 @@ if (
     // SINON ON LE CREE
     else{
 
-        $pdoStmnt = $mysqlConnection->prepare("INSERT INTO users (pseudo, created_at) VALUES (?)");
-        $isSuccess = $pdoStmnt->execute([$pseudo, date('Y-m-d H:i:s')]);
+        $pdoStmnt = $mysqlConnection->prepare("INSERT INTO users (pseudo, password, created_at) VALUES (?, ?, ?)");
+        $isSuccess = $pdoStmnt->execute([$pseudo, $password, date('Y-m-d H:i:s')]);
                     
         if (!$isSuccess) {
             header("Location: ../register.php?error=Echec lors de la connexion à votre compte"); 
