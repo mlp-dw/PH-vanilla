@@ -18,7 +18,7 @@
         Product hunt
         </a>
         <h1>Bienvenue <?= $_SESSION["pseudo"]?></h1>
-            <li class="nav-item dropdown">
+            <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Categorie
                     </a>
@@ -27,6 +27,6 @@
                     <li><a class="dropdown-item" href="#">most popular</a></li>
                     <li><a class="dropdown-item" href="#">web site </a></li>
                 </ul>
-            </li>
+            </div>
     </div>
 </nav>
