@@ -29,9 +29,9 @@ if (
         $isSuccess = $pdoStmnt->execute([$pseudo, $password, date('Y-m-d H:i:s')]);
                     
         if (!$isSuccess) {
-            header("Location: ../register.php?error=Echec lors de la connexion à votre compte"); 
+            header("Location: ../register.php?error=Echec lors de la création à votre compte"); 
         }else{
-            header("Location: ../index.php?success=Bienvenue sur votre compte !");
+            header("Location: ../log.php?success=Votre compte a été créé avec succes !");
         }
     
     }
