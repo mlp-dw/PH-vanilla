@@ -22,6 +22,7 @@
                 </a>
             </div>
             <h4 class="text-start my-auto">Product hunt</h4>
+
         </div>
 
         <div class="col-mb-3 ms-2 justify-content-center">
@@ -37,8 +38,6 @@
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href="#">Les plus populaires</a></li>
                     <li><a class="dropdown-item" href="#">Les plus recents</a></li>
-                    <li><hr class="dropdown-item"></li>
-
                 </ul>
             </div>
             <div class="nav-item dropdown">
@@ -58,7 +57,9 @@
 
             <div class="nav-item my-auto">
             <?php if(isset($_SESSION["pseudo"])){?>
+
                         <a href="process/process_logout.php" style="text-decoration: none;" class="link-dark">Deconnectez vous</a>
+
                         <?php } 
                      ?>
             </div>
