@@ -25,43 +25,43 @@
 
         </div>
 
-        <div class="col-mb-3 ms-2 justify-content-center">
-            <h1>Bienvenue <?= $_SESSION["pseudo"]?></h1>
-        </div>
+        <?php if(isset($_SESSION["pseudo"])){?>
 
-        <div class="col-mb-3 text-end nav nav-pills">
-
-            <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Categorie
-                    </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Les plus populaires</a></li>
-                    <li><a class="dropdown-item" href="#">Les plus recents</a></li>
-                </ul>
-            </div>
-            <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        languages
-                    </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">CSS</a></li>
-                    <li><a class="dropdown-item" href="#">PHP</a></li>
-                    <li><a class="dropdown-item" href="#">Javascript</a></li>
-                    <li><a class="dropdown-item" href="#">Ruby</a></li>
-                    <li><a class="dropdown-item" href="#">C#</a></li>
-                    <li><a class="dropdown-item" href="#">Python</a></li>
-                </ul>
+            <div class="col-mb-3 ms-2 justify-content-center">
+                <h1>Bienvenue <?= $_SESSION["pseudo"]?></h1>
             </div>
 
+            <div class="col-mb-3 text-end nav nav-pills">
 
-            <div class="nav-item my-auto">
-            <?php if(isset($_SESSION["pseudo"])){?>
+                <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie
+                        </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Les plus populaires</a></li>
+                        <li><a class="dropdown-item" href="#">Les plus recents</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            languages
+                        </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">CSS</a></li>
+                        <li><a class="dropdown-item" href="#">PHP</a></li>
+                        <li><a class="dropdown-item" href="#">Javascript</a></li>
+                        <li><a class="dropdown-item" href="#">Ruby</a></li>
+                        <li><a class="dropdown-item" href="#">C#</a></li>
+                        <li><a class="dropdown-item" href="#">Python</a></li>
+                    </ul>
+                </div>
 
-                        <a href="process/process_logout.php" style="text-decoration: none;" class="link-dark">Deconnectez vous</a>
 
-                        <?php } 
-                     ?>
+                <div class="nav-item my-auto">
+
+                            <a href="process/process_logout.php" style="text-decoration: none;" class="link-dark">Deconnectez vous</a>
+
+        <?php } ?>
             </div>
 
     </div>
