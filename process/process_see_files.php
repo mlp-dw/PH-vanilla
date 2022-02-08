@@ -1,11 +1,11 @@
 <?php
 // ON CONNECTE A LA BDD
- include "C:\laragon\www\product-hunt\utils\connexion_bdd.php";
-//include "D:/laragon/www/PRODUCT-HUNT-main/utils/connexion_bdd.php";
+//  include "C:\laragon\www\product-hunt\utils\connexion_bdd.php";
+include "D:/laragon/www/PRODUCT-HUNT-main/utils/connexion_bdd.php";
 
 
 // VOIR LES FICHIERS
-$seeData = $mysqlConnection->query("SELECT images, name, category, description, up, comment
+$seeData = $mysqlConnection->query("SELECT images, name, category, description, up, comment, products.id
 										FROM products
 										LEFT JOIN likes 
                                         -- PRENDS TOUTES LES DONNEES MEME SI LA SECONDE TABLE EST VIDE
