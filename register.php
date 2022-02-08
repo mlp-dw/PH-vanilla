@@ -1,6 +1,6 @@
 <?php include "./utils/header.php"?>
 
-    <?php include"./utils/alerts.php"?>
+    <?php include "./utils/alerts.php"?>
     <div class="card mx-auto my-5"style="width: 18rem">
         <div class="card-header">
             Register
