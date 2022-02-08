@@ -12,11 +12,12 @@
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
+
     <div class="container-fluid ">
 
         <div class="col-mb-3 text-start ">
             <a class="navbar-brand" href="#">
-            <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">
+             <img src="./images/logo.jpg" alt="" width="50" height="auto" class="d-inline-block align-text-top">
             Product hunt
             </a>
         </div>
@@ -26,6 +27,7 @@
         </div>
 
         <div class="col-mb-3 text-end nav nav-pills">
+
             <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Categorie
@@ -33,11 +35,8 @@
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href="#">Les plus populaires</a></li>
                     <li><a class="dropdown-item" href="#">Les plus recents</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <?php if(isset($_SESSION["pseudo"])){?>
-                        <li><a href="process/process_logout.php" class="dropdown-item">Deconnectez vous</a></li>
-                        <?php } 
-                     ?>
+                    <li><hr class="dropdown-item"></li>
+
                 </ul>
             </div>
             <div class="nav-item dropdown">
@@ -53,6 +52,14 @@
                     <li><a class="dropdown-item" href="#">Python</a></li>
                 </ul>
             </div>
-        </div>                
+
+
+            <div class="nav-item">
+            <?php if(isset($_SESSION["pseudo"])){?>
+                        <a href="process/process_logout.php" class="link-dark">Deconnecter vous</a>
+                        <?php } 
+                     ?>
+            </div>
+
     </div>
 </nav>

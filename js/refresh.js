@@ -18,7 +18,7 @@
                 let iSeeYou = document.createElement('div');
                 iSeeYou.innerHTML =`
                     
-                <div class="row">
+                <div class="row my-3">
 
                     <div class="col-12 col-sm-6 col-md-3 my-auto" >
                         <img src="${info.images}" class="img-fluid rounded-start" alt="...">
@@ -27,7 +27,7 @@
                     
                     <div class="col-12 col-sm-6 col-md-6 card-body">
                         <h5 class="card-title">${info.name} <span class="text-muted">${info.category}</span></h5>
-                        <p class="card-text">${info.description}</p>
+                        <p class="card-text text-truncate">${info.description}</p>
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-3 my-auto d-flex-column">
