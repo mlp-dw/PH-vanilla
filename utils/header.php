@@ -12,12 +12,20 @@
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-        <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        Product hunt
-        </a>
-        <h1>Bienvenue <?= $_SESSION["pseudo"]?></h1>
+    <div class="container-fluid ">
+
+        <div class="col-mb-3 text-start ">
+            <a class="navbar-brand" href="#">
+            <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Product hunt
+            </a>
+        </div>
+
+        <div class="col-mb-3 ms-2 justify-content-center">
+            <h1>Bienvenue <?= $_SESSION["pseudo"]?></h1>
+        </div>
+
+        <div class="col-mb-3 text-end nav nav-pills">
             <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Categorie
@@ -27,15 +35,14 @@
                     <li><a class="dropdown-item" href="#">Les plus recents</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <?php if(isset($_SESSION["pseudo"])){?>
-                        <li><a href="process/process_logout.php" class="dropdown-item">Deconnecter vous</a></li>
+                        <li><a href="process/process_logout.php" class="dropdown-item">Deconnectez vous</a></li>
                         <?php } 
                      ?>
                 </ul>
             </div>
-
             <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Les languages
+                        languages
                     </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href="#">CSS</a></li>
@@ -44,9 +51,8 @@
                     <li><a class="dropdown-item" href="#">Ruby</a></li>
                     <li><a class="dropdown-item" href="#">C#</a></li>
                     <li><a class="dropdown-item" href="#">Python</a></li>
-
-
                 </ul>
             </div>
+        </div>                
     </div>
 </nav>
