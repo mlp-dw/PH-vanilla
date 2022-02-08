@@ -12,12 +12,22 @@
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="./index.php">
-        <img src="./images/logo.jpg" alt="" width="50" height="auto" class="d-inline-block align-text-top">
-        Product hunt
-        </a>
-        <h1>Bienvenue <?= $_SESSION["pseudo"]?></h1>
+
+    <div class="container-fluid ">
+
+        <div class="col-mb-3 text-start ">
+            <a class="navbar-brand" href="#">
+             <img src="./images/logo.jpg" alt="" width="50" height="auto" class="d-inline-block align-text-top">
+            Product hunt
+            </a>
+        </div>
+
+        <div class="col-mb-3 ms-2 justify-content-center">
+            <h1>Bienvenue <?= $_SESSION["pseudo"]?></h1>
+        </div>
+
+        <div class="col-mb-3 text-end nav nav-pills">
+
             <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Categorie
@@ -26,13 +36,12 @@
                     <li><a class="dropdown-item" href="#">Les plus populaires</a></li>
                     <li><a class="dropdown-item" href="#">Les plus recents</a></li>
                     <li><hr class="dropdown-item"></li>
-                    
+
                 </ul>
             </div>
-
             <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Les languages
+                        languages
                     </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href="#">CSS</a></li>
@@ -41,10 +50,9 @@
                     <li><a class="dropdown-item" href="#">Ruby</a></li>
                     <li><a class="dropdown-item" href="#">C#</a></li>
                     <li><a class="dropdown-item" href="#">Python</a></li>
-
-
                 </ul>
             </div>
+
 
             <div class="nav-item">
             <?php if(isset($_SESSION["pseudo"])){?>
@@ -52,5 +60,6 @@
                         <?php } 
                      ?>
             </div>
+
     </div>
 </nav>
