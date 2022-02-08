@@ -16,7 +16,7 @@
     <div class="container-fluid ">
 
         <div class="col-mb-3 text-start ">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand " href="#">
              <img src="./images/logo.jpg" alt="" width="50" height="auto" class="d-inline-block align-text-top">
             Product hunt
             </a>
@@ -35,8 +35,6 @@
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href="#">Les plus populaires</a></li>
                     <li><a class="dropdown-item" href="#">Les plus recents</a></li>
-                    <li><hr class="dropdown-item"></li>
-
                 </ul>
             </div>
             <div class="nav-item dropdown">
@@ -54,9 +52,9 @@
             </div>
 
 
-            <div class="nav-item">
+            <div class="nav-item my-auto">
             <?php if(isset($_SESSION["pseudo"])){?>
-                        <a href="process/process_logout.php" class="link-dark">Deconnecter vous</a>
+                        <a href="process/process_logout.php" class="link-dark">Deconnectez-vous</a>
                         <?php } 
                      ?>
             </div>
