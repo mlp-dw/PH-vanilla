@@ -13,8 +13,8 @@
 <body>
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-        <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <a class="navbar-brand" href="./index.php">
+        <img src="./images/logo.jpg" alt="" width="50" height="auto" class="d-inline-block align-text-top">
         Product hunt
         </a>
         <h1>Bienvenue <?= $_SESSION["pseudo"]?></h1>
@@ -25,11 +25,8 @@
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href="#">Les plus populaires</a></li>
                     <li><a class="dropdown-item" href="#">Les plus recents</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <?php if(isset($_SESSION["pseudo"])){?>
-                        <li><a href="process/process_logout.php" class="dropdown-item">Deconnecter vous</a></li>
-                        <?php } 
-                     ?>
+                    <li><hr class="dropdown-item"></li>
+                    
                 </ul>
             </div>
 
@@ -47,6 +44,13 @@
 
 
                 </ul>
+            </div>
+
+            <div class="nav-item">
+            <?php if(isset($_SESSION["pseudo"])){?>
+                        <a href="process/process_logout.php" class="link-dark">Deconnecter vous</a>
+                        <?php } 
+                     ?>
             </div>
     </div>
 </nav>
