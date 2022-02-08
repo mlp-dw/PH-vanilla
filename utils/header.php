@@ -15,11 +15,14 @@
 
     <div class="container-fluid ">
 
-        <div class="col-mb-3 text-start ">
-            <a class="navbar-brand " href="#">
-             <img src="./images/logo.jpg" alt="" width="50" height="auto" class="d-inline-block align-text-top">
-            Product hunt
-            </a>
+        <div class="nav nav-pills">
+            <div class="col-mb-3 text-start ">
+                <a class="navbar-brand" href="#">
+                 <img src="./images/logo.jpg" alt="" width="50" height="auto" class="d-inline-block align-text-top ">
+                </a>
+            </div>
+            <h4 class="text-start my-auto">Product hunt</h4>
+
         </div>
 
         <div class="col-mb-3 ms-2 justify-content-center">
@@ -54,7 +57,9 @@
 
             <div class="nav-item my-auto">
             <?php if(isset($_SESSION["pseudo"])){?>
-                        <a href="process/process_logout.php" class="link-dark">Deconnectez-vous</a>
+
+                        <a href="process/process_logout.php" style="text-decoration: none;" class="link-dark">Deconnectez vous</a>
+
                         <?php } 
                      ?>
             </div>

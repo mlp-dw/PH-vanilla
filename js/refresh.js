@@ -51,6 +51,8 @@
                     <div class="col-12 col-sm-6 col-md-6 card-body">
                         <h5 class="card-title">${info.name} <span class="text-muted">${info.category}</span></h5>
                         <p class="card-text text-truncate">${info.description}</p>
+                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        ...</button>
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-3 my-auto d-flex-column">
