@@ -35,7 +35,11 @@
 
                 iSeeYou.innerHTML =`
                 
+<<<<<<< HEAD
+                <div class="row my-3 post" data-bs-toggle="modal" data-bs-target="#modal-${info.id}"  id="myModal">
+=======
                 <div class="row my-3" data-bs-toggle="modal" data-bs-target="#modal-${info.id}"  id="myModal">
+>>>>>>> b373e0ecc3a74c2f7cf3ab6306131d0b085f27b0
 
                             <div class="modal fade" id="modal-${info.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -94,7 +98,6 @@
                             </svg> ${countComment}
                         </span>
                         
-
                     </div>
 
                 </div>
