@@ -26,6 +26,7 @@
         </div>
         <?php if(isset($_SESSION["pseudo"])){?>
 
+<<<<<<< HEAD
             <form class="d-flex">
                 <input type="search" id="SearchBar" name="search" placeholder="Search" >
                 <button class="btn btn-outline-dark" type="submit">Search</button>
@@ -67,6 +68,48 @@
 
                 </div>
         </div>
+=======
+        <?php if(isset($_SESSION["pseudo"])){?>
+
+            <div class="col-mb-3 ms-2 justify-content-center">
+                <h1>Bienvenue <?= $_SESSION["pseudo"]?></h1>
+            </div>
+
+            <div class="col-mb-3 text-end nav nav-pills">
+
+                <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie
+                        </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Les plus populaires</a></li>
+                        <li><a class="dropdown-item" href="#">Les plus recents</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            languages
+                        </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">CSS</a></li>
+                        <li><a class="dropdown-item" href="#">PHP</a></li>
+                        <li><a class="dropdown-item" href="#">Javascript</a></li>
+                        <li><a class="dropdown-item" href="#">Ruby</a></li>
+                        <li><a class="dropdown-item" href="#">C#</a></li>
+                        <li><a class="dropdown-item" href="#">Python</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="nav-item my-auto">
+
+                            <a href="process/process_logout.php" style="text-decoration: none;" class="link-dark">Deconnectez vous</a>
+
+        <?php } ?>
+            </div>
+
+    </div>
+>>>>>>> b373e0ecc3a74c2f7cf3ab6306131d0b085f27b0
 </nav>
 <script src="../js/search.js"></script>
 
