@@ -44,7 +44,7 @@
                 </div>
                 <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            languages
+                            Languages
                         </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                         <li><a class="dropdown-item" href="#">CSS</a></li>
@@ -58,11 +58,10 @@
 
 
                 <div class="nav-item my-auto">
-
-                            <a href="process/process_logout.php" style="text-decoration: none;" class="link-dark">Deconnectez vous</a>
-
+                    <a href="process/process_logout.php" style="text-decoration: none;" class="link-dark">Deconnectez vous</a>
+                </div>
         <?php } ?>
-            </div>
+            
 
     </div>
 </nav>

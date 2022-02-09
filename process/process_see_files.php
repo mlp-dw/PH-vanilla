@@ -5,15 +5,36 @@ include "C:\laragon\www\product-hunt\utils\connexion_bdd.php";
 
 
 // VOIR LES FICHIERS
-$seeData = $mysqlConnection->query("SELECT images, name, category, description, up, comment, products.id
+$seeData = $mysqlConnection->query("SELECT *
 										FROM products
-										LEFT JOIN likes 
-                                        -- PRENDS TOUTES LES DONNEES MEME SI LA SECONDE TABLE EST VIDE
-											ON products.id=likes.product_id
-										ORDER BY products.created_at ASC
-										");
+									ORDER BY created_at DESC
+									");
 $files = $seeData->fetchAll();
 
+for ($i=0; $i < count($files); $i++) { 
+	
+	$seeLikes = $mysqlConnection->query("SELECT up
+										 FROM likes
+										 WHERE product_id = ' ". $files[$i]["id"] ."'
+	");
+	$likes = $seeLikes->fetchAll();
+	$files[$i]["likes"] = $likes;
+	
+}
+
+for ($i=0; $i < count($files); $i++) { 
+	
+	$seeComments = $mysqlConnection->query("SELECT comment
+										 FROM likes
+										 WHERE product_id = ' ". $files[$i]["id"] ."'
+	");
+	$comments = $seeComments->fetchAll();
+	$files[$i]["comments"] = $comments;
+	
+}
+
+
 	echo json_encode($files);
+	
 	
 ?>
