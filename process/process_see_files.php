@@ -1,7 +1,7 @@
 <?php
 // ON CONNECTE A LA BDD
-include "C:\laragon\www\product-hunt\utils\connexion_bdd.php";
-//include "D:/laragon/www/PRODUCT-HUNT-main/utils/connexion_bdd.php";
+//include "C:\laragon\www\product-hunt\utils\connexion_bdd.php";
+include "D:/laragon/www/PRODUCT-HUNT-main/utils/connexion_bdd.php";
 
 
 // VOIR LES FICHIERS
