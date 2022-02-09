@@ -1,4 +1,5 @@
 <?php include "./utils/header.php"?>
+<?php include "./utils/alerts.php"?>
 
 
 <div class="container col-12" style="overflow:hidden">

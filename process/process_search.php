@@ -8,5 +8,5 @@ if(isset($_POST['search']) && !empty($_POST['search']))
     if (!$select) {
         header("Location: ../liste-patient.php?error=Echec lors de la recherche"); 
     }else{
+        ?>
     }
-    ?>
