@@ -1,25 +1,48 @@
 <?php include "./utils/header.php"?>
+<?php include "./utils/alerts.php"?>
 
-    <?php include "./utils/alerts.php"?>
-    <div class="card mx-auto my-5"style="width: 18rem">
-        <div class="card-header">
-            Register
+<div class="form-signin m-3 d-flex justify-content-center ">
+    <form action="process/process_log.php" method="POST">
+        <h1 class="h3 mb-3 fw-normal">Register</h1>
+
+        <div class="m-2">
+            <label for="message">Pseudo</label>
+            <input type="text" name="pseudo" class="form-control" placeholder="Pseudo">
         </div>
-        <div class="card-body mx-auto">
-            <form action="process/process_log.php" method="POST">
-            <label for="pseudo"></label>
-            <input class="m-1 mx-auto" type="text" placeholder="Enter your pseudo" name="pseudo">
-            <label for="password"></label>
-            <input class="m-1 " type="password" placeholder="Enter your password" name="password">
-            <button type="submit" class="btn btn-light mx-auto m-3">Entrer</button>
-            </form>
+
+        <div class="m-2">
+            <label for="message">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password">
         </div>
+
+        <div class="d-flex justify-content-center">
+            <button class="w-30 btn btn-lg btn-primary" type="submit">Envoyer</button>
+        </div>
+        
+    </form>
+</div>
+
+    <div class="form-signin m-3 d-flex justify-content-center ">
+        <form action="process/process_login.php" method="POST">
+
+            <h1 class="h3 mb-3 fw-normal">Connexion</h1>
+
+            <div class="m-2">
+                <label for="message">Pseudo</label>
+                <input type="text" name="pseudo" class="form-control" placeholder="Pseudo">
+            </div>
+
+            <div class="m-2">
+                <label for="message">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+
+
+            <div class="d-flex justify-content-center">
+                <button class="w-30 btn btn-lg btn-primary" type="submit">Envoyer</button>
+            </div>
+            
+        </form>
     </div>
-</body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <?php include "./utils/footer.php" ?>

@@ -14,10 +14,4 @@
 
 
 
-
-
-
-
-
-
 <?php include "./utils/footer.php" ?>
