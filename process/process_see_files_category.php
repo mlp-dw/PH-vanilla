@@ -7,11 +7,10 @@ include "D:/laragon/www/PRODUCT-HUNT-main/utils/connexion_bdd.php";
 // VOIR LES FICHIERS
 $seeData = $mysqlConnection->query("SELECT *
 										FROM products
-									ORDER BY created_at DESC
+									ORDER BY category
 									");
 $files = $seeData->fetchAll();
 
-// SELCTION DES LIKES EN FONCTION DES ID PRODUIT
 for ($i=0; $i < count($files); $i++) { 
 	
 	$seeLikes = $mysqlConnection->query("SELECT up
@@ -23,7 +22,6 @@ for ($i=0; $i < count($files); $i++) {
 	
 }
 
-// SELCTION DES COMMENTS EN FONCTION DES ID PRODUIT
 for ($i=0; $i < count($files); $i++) { 
 	
 	$seeComments = $mysqlConnection->query("SELECT comment
