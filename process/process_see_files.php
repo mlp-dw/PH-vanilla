@@ -11,6 +11,7 @@ $seeData = $mysqlConnection->query("SELECT *
 									");
 $files = $seeData->fetchAll();
 
+// SELCTION DES LIKES EN FONCTION DES ID PRODUIT
 for ($i=0; $i < count($files); $i++) { 
 	
 	$seeLikes = $mysqlConnection->query("SELECT up
@@ -22,6 +23,7 @@ for ($i=0; $i < count($files); $i++) {
 	
 }
 
+// SELCTION DES COMMENTS EN FONCTION DES ID PRODUIT
 for ($i=0; $i < count($files); $i++) { 
 	
 	$seeComments = $mysqlConnection->query("SELECT comment

@@ -6,6 +6,7 @@ if(isset($_GET['search']) && !empty($_GET['search']))
 {
     $_POST['search'] = htmlspecialchars($_GET['search']); //pour empêcher l'execution de balise
     $select = $mysqlConnection->prepare("SELECT * FROM products WHERE description LIKE ? OR name LIKE ?");
+
     $select->execute([$_GET['search'].'%' , $_GET['search'].'%']);
     $selected = $select->fetchAll();
     for ($i=0; $i < count($selected); $i++) { 
@@ -32,3 +33,4 @@ if(isset($_GET['search']) && !empty($_GET['search']))
 	echo json_encode($selected);
 };
 ?>
+

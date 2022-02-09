@@ -27,6 +27,7 @@
 
 
 <script src="./js/refresh.js"></script>
+<script src="./js/search.js"></script>
 <script src="./js/filter_category.js"></script>
 <script src="./js/send_like.js"></script>
 <script src="./js/send_comment.js"></script>
