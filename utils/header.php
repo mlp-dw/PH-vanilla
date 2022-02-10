@@ -33,7 +33,7 @@
         <div class="" id="search_form">
             <form class="d-flex flex-row" action="" method="POST" autocompletion="auto">
                 <input type="search" class="form-control" name="search" placeholder="Rechercher..." aria-label="Search" id="searchBar">
-                <button class="btn btn-outline-dark" id="serachBTN" name="envoi" onclick="search_proxy()">🔍</button>
+                <button class="btn btn-outline-dark" id="searchBTN" name="envoi" onclick="search()">🔍</button>
             </form>
         </div>
             
@@ -41,7 +41,7 @@
             <div class="col-mb-3 text-end nav nav-pills">
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorie
+                            Trier par...
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li>
@@ -55,7 +55,7 @@
 
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark"  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            languages
+                            Languages
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" id="language" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a class="dropdown-item" value="1" href="./process/process_see_files_category.php">CSS</a></li>

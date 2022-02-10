@@ -33,9 +33,6 @@ function refreshNewProduct() {
                 countUP = upsFilter.length;
                 countComment = commentsFilter.length;
 
-
-
-
                 iSeeYou.innerHTML =`
                 
                 <div class="row my-3 post" data-bs-toggle="modal" data-bs-target="#modal-${info.id}"  id="myModal">
@@ -89,7 +86,7 @@ function refreshNewProduct() {
         
                     
                     <div class="col-12 col-sm-6 col-md-6 card-body">
-                        <h5 class="card-title">${info.name} <span class="text-muted">${info.category}</span></h5>
+                        <h5 class="card-title">${info.name}</h5>
                         <p class="card-text text-truncate">${info.description}</p>
                     </div>
 
@@ -193,10 +190,6 @@ function refreshPopular() {
                 countUP = upsFilter.length;
                 countComment = commentsFilter.length;
                 
-
-
-
-
                 iSeeYou.innerHTML =`
                 
                 <div class="row my-3 post" data-bs-toggle="modal" data-bs-target="#modal-${info.id}"  id="myModal">
@@ -250,7 +243,7 @@ function refreshPopular() {
         
                     
                     <div class="col-12 col-sm-6 col-md-6 card-body">
-                        <h5 class="card-title">${info.name} <span class="text-muted">${info.category}</span></h5>
+                        <h5 class="card-title">${info.name}</h5>
                         <p class="card-text text-truncate">${info.description}</p>
                     </div>
 

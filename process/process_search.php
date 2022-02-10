@@ -14,8 +14,8 @@ if(isset($_POST['search']) && !empty($_POST['search']))
     $selected = $select->fetchAll();
 
 
-    // SELCTION DES LIKES EN FONCTION DES ID PRODUIT
-    for ($i=0; $i < count($selected); $i++) { 
+        // SELCTION DES LIKES EN FONCTION DES ID PRODUIT
+        for ($i=0; $i < count($selected); $i++) { 
 
         $seeLikes = $mysqlConnection->query("SELECT up
                                             FROM likes
