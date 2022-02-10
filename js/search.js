@@ -1,18 +1,4 @@
-// RAFRAICHIR LA PAGE
-
-        //addeventlistener pour que le js surveille l'input
-
-        const SearchBar = document.getElementById('SearchBar')
-        console.log(SearchBar)
-    
-
-        //recupere le fetch en js
-        
-        //comment affiche les donnees recuperer dans mon html
-
-// function refreshMessages() {
-    
-    fetch('./process/process_search.php') // Ce code permet d'envoyer une requête HTTP de type GET au service web
+fetch('./process/process_search.php') // Ce code permet d'envoyer une requête HTTP de type GET au service web
     .then(function (response){
          // pour récupérer le résultat de la requête au format json
             return response.json(); //en ayant vérifié au préalable que la requête s’était bien passée avec response.ok.
@@ -20,6 +6,25 @@
     .then(function(value) {
         let divAPP = document.getElementById("app");
         divAPP.innerHTML = ""; // permet de garder la div parent sans boucler a l'infini les messages (remise a zero de la div avant de réafficher le contenue)
+        
+        
+        function search_proxy() {
+            const searchText = document.querySelector('#searchBar').value;
+            
+            if(typeof search === "function") {
+                /*global search*/  
+                let results = search(searchText);
+                if(typeof results === "string") {
+                    results = [results];
+                }
+                init_animals_table(results);
+            }
+            else {
+                console.log("Echec lors de la recherche")
+            }
+        }
+        
+        
         value.forEach(info => {
                 
                 let iSeeYou = document.createElement('div');
@@ -127,17 +132,7 @@
     .catch(function(err) {
         // Une erreur est survenue
     });
-//}
 
-
-// //TOUTE LES SECONDES
-//     setInterval(() => {
-//     refreshMessages ('../process/process_see_files.php')
-//     }, 1000);
-
-    
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     
 
