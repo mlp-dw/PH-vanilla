@@ -1,13 +1,21 @@
 // RAFRAICHIR LA PAGE
 
 
+
+// recuperer le language choisis par l'utilisateur 
+ const language = document.getElementById['language']   
+//recuperer l'id du bouton choisis
+var valeur = select.options[select.selectedIndex].value;
+console.log(valeur)
+//afficher les post qui on pour nom le nom du bouton choisis ex: selctionne ruby affiche post avec ruby
+
 // function refreshMessages() {
     
     fetch('./process/process_see_files_category.php') // Ce code permet d'envoyer une requête HTTP de type GET au service web
     .then(function (response){
          // pour récupérer le résultat de la requête au format json
             return response.json(); //en ayant vérifié au préalable que la requête s’était bien passée avec response.ok.
-    })
+    }) //comment mettre des donnee post dans un fetch 
     .then(function(value) {
         let divAPP = document.getElementById("app");
         divAPP.innerHTML = ""; // permet de garder la div parent sans boucler a l'infini les messages (remise a zero de la div avant de réafficher le contenue)

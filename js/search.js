@@ -1,4 +1,5 @@
 fetch('./process/process_search.php') // Ce code permet d'envoyer une requête HTTP de type GET au service web
+
     .then(function (response){
          // pour récupérer le résultat de la requête au format json
             return response.json(); //en ayant vérifié au préalable que la requête s’était bien passée avec response.ok.

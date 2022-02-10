@@ -7,7 +7,7 @@ include "D:/laragon/www/PRODUCT-HUNT-main/utils/connexion_bdd.php";
 // VOIR LES FICHIERS
 $seeData = $mysqlConnection->query("SELECT *
 										FROM products
-									ORDER BY category
+									WHERE category = 'category'
 									");
 $files = $seeData->fetchAll();
 
