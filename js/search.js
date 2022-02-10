@@ -6,7 +6,7 @@
 //     .then(function(value) {
 //         let divAPP = document.getElementById("app");
 //         divAPP.innerHTML = ""; // permet de garder la div parent sans boucler a l'infini les messages (remise a zero de la div avant de réafficher le contenue)
-        
+
         
 //         function search_proxy() {
 //             const searchText = document.querySelector('#searchBar').value;
