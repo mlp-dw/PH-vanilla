@@ -1,15 +1,4 @@
 // RAFRAICHIR LA PAGE
-
-        //addeventlistener pour que le js surveille l'input
-
-        const SearchBar = document.getElementById('SearchBar')
-        console.log(SearchBar)
-    
-
-        //recupere le fetch en js
-        
-        //comment affiche les donnees recuperer dans mon html
-
 // function refreshMessages() {
     
     fetch('./process/process_search.php') // Ce code permet d'envoyer une requête HTTP de type GET au service web

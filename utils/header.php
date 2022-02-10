@@ -51,13 +51,13 @@
                         <a class="nav-link dropdown-toggle text-dark"  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             languages
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="./js/filter_category.js">CSS</a></li>
-                            <li><a class="dropdown-item" href="#">PHP</a></li>
-                            <li><a class="dropdown-item" href="#">Javascript</a></li>
-                            <li><a class="dropdown-item" href="#">Ruby</a></li>
-                            <li><a class="dropdown-item" href="#">C#</a></li>
-                            <li><a class="dropdown-item" href="#">Python</a></li>
+                        <ul class="dropdown-menu dropdown-menu-dark" id="language" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" value="1" href="./process/process_see_files_category.php">CSS</a></li>
+                            <li><a class="dropdown-item" value="2" href="./process/process_see_files_category.php">PHP</a></li>
+                            <li><a class="dropdown-item" value="3" href="./process/process_see_files_category.php">Javascript</a></li>
+                            <li><a class="dropdown-item" value="4" href="./process/process_see_files_category.php">Ruby</a></li>
+                            <li><a class="dropdown-item" value="5" href="./process/process_see_files_category.php">C#</a></li>
+                            <li><a class="dropdown-item" value="6" href="./process/process_see_files_category.php">Python</a></li>
                         </ul>
                     </div>
                 <div class="my-auto">
