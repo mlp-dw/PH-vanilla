@@ -6,10 +6,10 @@
 
     <div class="row d-flex justify-content-around ">
 
-        <div class="col-12 col-sm-6 col-md-9 card mb-3" style="max-width: 740px;" id="app">
+        <div class="item col-12 col-sm-6 col-md-9 card mb-3" style="max-width: 740px;" id="app">
         <!-- LE JS ICI -->
-        
         </div>
+
     </div>
 </div>
 

@@ -31,10 +31,8 @@
 
 
         <div class="" id="search_form">
-            <form class="d-flex flex-row" action="" method="POST" autocompletion="auto">
-                <input type="search" class="form-control" name="search" placeholder="Rechercher..." aria-label="Search" id="searchBar">
-                <button class="btn btn-outline-dark" id="searchBTN" name="envoi" onclick="search()">🔍</button>
-            </form>
+                <input type="search" class="form-control" name="search" placeholder="Rechercher..." aria-label="Search" id="searchBar" >
+                <button type="submit" class="btn btn-outline-dark" id="searchBTN" name="envoi" onclick="fetchProduct()">🔍</button>
         </div>
             
 
