@@ -1,38 +1,61 @@
 // RAFRAICHIR LA PAGE
 
-
-
-// recuperer le language choisis par l'utilisateur 
- const language = document.getElementById['language']   
-//recuperer l'id du bouton choisis
-var valeur = select.options[select.selectedIndex].value;
-console.log(valeur)
 //afficher les post qui on pour nom le nom du bouton choisis ex: selctionne ruby affiche post avec ruby
 
-// function refreshMessages() {
-    
-    fetch('./process/process_see_files_category.php') // Ce code permet d'envoyer une requête HTTP de type GET au service web
+ function refreshcategory() {
+    console.log("toto");
+    fetch('./process/process_see_category.php') // Ce code permet d'envoyer une requête HTTP de type GET au service web
     .then(function (response){
          // pour récupérer le résultat de la requête au format json
-            return response.json(); //en ayant vérifié au préalable que la requête s’était bien passée avec response.ok.
-    }) //comment mettre des donnee post dans un fetch 
+           
+         console.log(response);
+
+         return response.json(); //en ayant vérifié au préalable que la requête s’était bien passée avec response.ok.
+
+        })       
+
     .then(function(value) {
+        console.log(value);
+
+        let divNav = document.getElementById("idnav");
+        divNav.innerHTML = "";
+
+        function filtrecategory(categorys){
+
+            return categorys.filter((category) => {
+                return category.category !== ""; 
+            });
+            
+        }
+
+
+        console.log('xsto');
+        
+        value.forEach(navi => {
+            let iSeenav = document.createElement('div');
+            iSeenav.innerHTML =` <li><a class="dropdown-item" href="#" onclick="refreshcategory()">${navi.name}</a></li> `;
+            divNav.appendChild(iSeenav);
+        });
+
+
         let divAPP = document.getElementById("app");
         divAPP.innerHTML = ""; // permet de garder la div parent sans boucler a l'infini les messages (remise a zero de la div avant de réafficher le contenue)
         value.forEach(info => {
-                
-                let iSeeYou = document.createElement('div');
-                let ups = info.likes;
-                let comments = info.comments;
-                
-
-                let upsFilter = ups.filter((up) => {
-                    return up.up !== ""; 
-                });
-
-                let commentsFilter = comments.filter((comment) => {
-                    return comment.comment !== ""; //1 tableau 2 le champs
-                });
+            let iSeeYou = document.createElement('div');
+            let ups = info.likes;
+            let comments = info.comments;
+            let name = navi.name;
+            let id = navi.id
+            
+            
+            let upsFilter = ups.filter((up) => {
+                return up.up !== ""; 
+            });
+            
+            let commentsFilter = comments.filter((comment) => {
+                return comment.comment !== ""; //1 tableau 2 le champs
+            });
+            let 
                 
                 countUP = upsFilter.length;
                 countComment = commentsFilter.length;
@@ -42,14 +65,14 @@ console.log(valeur)
 
                 iSeeYou.innerHTML =`
                 
-                <div class="row my-3 post" data-bs-toggle="modal" data-bs-target="#modal-${info.id}"  id="myModal">
+                <div class="row my-3 post" data-bs-toggle="modal" data-bs-target="#modal-${navi.id}"  id="myModal">
 
 
-                            <div class="modal fade" id="modal-${info.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="modal-${navi.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="modalLabel-${info.id}">${info.name}</h5>
+                                            <h5 class="modal-title" id="modalLabel-${navi.id}">${navi.name}</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -83,7 +106,7 @@ console.log(valeur)
         
                     
                     <div class="col-12 col-sm-6 col-md-6 card-body">
-                        <h5 class="card-title">${info.name} <span class="text-muted">${info.category}</span></h5>
+                        <h5 class="card-title">${navi.name}<span class="text-muted">${navi.name}</span></h5>
                         <p class="card-text text-truncate">${info.description}</p>
                     </div>
 
@@ -126,12 +149,12 @@ console.log(valeur)
     .catch(function(err) {
         // Une erreur est survenue
     });
-//}
+}
 
 
 // //TOUTE LES SECONDES
 //     setInterval(() => {
-//     refreshMessages ('../process/process_see_files.php')
+//     refreshcategory ('../process/process_see_files.php')
 //     }, 1000);
 
     

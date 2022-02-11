@@ -3,14 +3,11 @@
 //include "C:\laragon\www\product-hunt\utils\connexion_bdd.php";
 include "D:/laragon/www/PRODUCT-HUNT-main/utils/connexion_bdd.php";
 
-
 // VOIR LES FICHIERS
-$seeData = $mysqlConnection->query("SELECT *
-										FROM products
-									WHERE category = 'category'
+$seeData = $mysqlConnection->query("    SELECT *
+										FROM products						
 									");
 $files = $seeData->fetchAll();
-
 for ($i=0; $i < count($files); $i++) { 
 	
 	$seeLikes = $mysqlConnection->query("SELECT up
@@ -33,8 +30,6 @@ for ($i=0; $i < count($files); $i++) {
 	
 }
 
-
 	echo json_encode($files);
-	
 	
 ?>

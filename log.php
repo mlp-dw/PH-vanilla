@@ -2,27 +2,27 @@
 <?php include "utils/alerts.php";?>
 
 
-<main class="form-signin m-3 d-flex justify-content-center ">
-        <form action="process/process_login.php" method="POST">
+    <main class="form-signin m-3 d-flex justify-content-center ">
+            <form action="process/process_login.php" method="POST">
 
-            <h1 class="h3 mb-3 fw-normal">Connexion</h1>
+                <h1 class="h3 mb-3 fw-normal">Connexion</h1>
 
-            <div class="m-2">
-                <label for="message">Pseudo</label>
-                <input type="text" name="pseudo" class="form-control" placeholder="Pseudo">
-            </div>
+                <div class="m-2">
+                    <label for="message">Pseudo</label>
+                    <input type="text" name="pseudo" class="form-control" placeholder="Pseudo">
+                </div>
 
-            <div class="m-2">
-                <label for="message">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Password">
-            </div>
+                <div class="m-2">
+                    <label for="message">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Password">
+                </div>
 
 
-            <div class="d-flex justify-content-center">
-                <button class="w-30 btn btn-lg btn-primary" type="submit">Envoyer</button>
-            </div>
-            
-        </form>
+                <div class="d-flex justify-content-center">
+                    <button class="w-30 btn btn-lg btn-primary" type="submit">Envoyer</button>
+                </div>
+
+            </form>
     </main>
 
 
