@@ -30,7 +30,7 @@
         {?>
 
 
-        <div class="" id="search_form">
+        <div class="d-flex" id="search_form">
                 <input type="search" class="form-control" name="search" placeholder="Rechercher..." aria-label="Search" id="searchBar" >
                 <button type="submit" class="btn btn-outline-dark" id="searchBTN" name="envoi" onclick="fetchProduct()">🔍</button>
         </div>
