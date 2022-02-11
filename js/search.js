@@ -156,7 +156,7 @@ function showProduct(value){
     
 }//function showProduct end
 
-    
+
 
 function fetchProduct(){
     let data = new FormData();
