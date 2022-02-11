@@ -33,9 +33,6 @@ function refreshNewProduct() {
                 countUP = upsFilter.length;
                 countComment = commentsFilter.length;
 
-
-
-
                 iSeeYou.innerHTML =`
                 
                 <div class="row my-3 post" data-bs-toggle="modal" data-bs-target="#modal-${info.id}"  id="myModal">
@@ -51,13 +48,6 @@ function refreshNewProduct() {
                                         <div class="modal-body">
                                             <img src="${info.images}" class="img-fluid rounded-start" alt="...">
                                             <p class="">${info.description}</p>
-
-                                            <form action="./process/process_comment.php" method="POST">
-                                                <div class="mb-3">
-                                                    <label for="message-text" class="col-form-label">Message:</label>
-                                                    <textarea class="form-control" id="message-text"></textarea>
-                                                </div>
-                                            </form>
                                         </div>
                                         
                                         <div class="modal-footer">
@@ -193,10 +183,6 @@ function refreshPopular() {
                 countUP = upsFilter.length;
                 countComment = commentsFilter.length;
                 
-
-
-
-
                 iSeeYou.innerHTML =`
                 
                 <div class="row my-3 post" data-bs-toggle="modal" data-bs-target="#modal-${info.id}"  id="myModal">
@@ -212,13 +198,6 @@ function refreshPopular() {
                                         <div class="modal-body">
                                             <img src="${info.images}" class="img-fluid rounded-start" alt="...">
                                             <p class="">${info.description}</p>
-
-                                            <form action="./process/process_comment.php" method="POST">
-                                                <div class="mb-3">
-                                                    <label for="message-text" class="col-form-label">Message:</label>
-                                                    <textarea class="form-control" id="message-text"></textarea>
-                                                </div>
-                                            </form>
                                         </div>
                                         
                                         <div class="modal-footer">

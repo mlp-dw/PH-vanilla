@@ -30,18 +30,16 @@
         {?>
 
 
-        <div class="" id="search_form">
-            <form class="d-flex flex-row" action="" method="POST" autocompletion="auto">
-                <input type="search" class="form-control" name="search" placeholder="Rechercher..." aria-label="Search" id="searchBar">
-                <button class="btn btn-outline-dark" id="serachBTN" name="envoi" onclick="search_proxy()">🔍</button>
-            </form>
+        <div class="d-flex" id="search_form">
+                <input type="search" class="form-control" name="search" placeholder="Rechercher..." aria-label="Search" id="searchBar" >
+                <button type="submit" class="btn btn-outline-dark" id="searchBTN" name="envoi" onclick="fetchProduct()">🔍</button>
         </div>
             
 
             <div class="col-mb-3 text-end nav nav-pills">
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorie
+                            Trier par...
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li>
@@ -57,8 +55,13 @@
                         <a class="nav-link dropdown-toggle text-dark"  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Languages
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" id="idnav" aria-labelledby="navbarDarkDropdownMenuLink">
-                            
+                        <ul class="dropdown-menu dropdown-menu-dark" id="language" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" value="1" href="./process/process_see_files_category.php">CSS</a></li>
+                            <li><a class="dropdown-item" value="2" href="./process/process_see_files_category.php">PHP</a></li>
+                            <li><a class="dropdown-item" value="3" href="./process/process_see_files_category.php">Javascript</a></li>
+                            <li><a class="dropdown-item" value="4" href="./process/process_see_files_category.php">Ruby</a></li>
+                            <li><a class="dropdown-item" value="5" href="./process/process_see_files_category.php">C#</a></li>
+                            <li><a class="dropdown-item" value="6" href="./process/process_see_files_category.php">Python</a></li>
                         </ul>
                     </div>
                 <div class="my-auto">
