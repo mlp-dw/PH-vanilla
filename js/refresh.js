@@ -126,10 +126,10 @@ function refreshNewProduct() {
 }
 
 
-//TOUTE LES SECONDES
-     setInterval(() => {
-     refreshNewProduct ('../process/process_see_files.php')
-    }, 5000);
+// //TOUTE LES SECONDES
+//      setInterval(() => {
+//      refreshNewProduct ('../process/process_see_files.php')
+//     }, 5000);
 
     
 
@@ -276,10 +276,10 @@ function refreshPopular() {
 }
 
 
-//TOUTE LES SECONDES
-    setInterval(() => {
-    refreshPopular ('../process/process_see_files.php')
-    }, 5000);
+// //TOUTE LES SECONDES
+//     setInterval(() => {
+//     refreshPopular ('../process/process_see_files.php')
+//     }, 5000);
 
     
 

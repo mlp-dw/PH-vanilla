@@ -19,7 +19,7 @@
 
         <div class="nav nav-pills">
             <div class="col-mb-3 text-start ">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="./register.php">
                     <img src="./images/logo.jpg" alt="" width="50" height="auto" class="d-inline-block align-text-top ">
                 </a>
             </div>

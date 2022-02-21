@@ -1,4 +1,3 @@
-// RAFRAICHIR LA PAGE
 
 //afficher les post qui on pour nom le nom du bouton choisis ex: selctionne ruby affiche post avec ruby
 
