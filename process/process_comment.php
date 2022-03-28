@@ -2,6 +2,8 @@
 session_start();
 $isUserProvided = isset($_SESSION['id'])  && !empty($_SESSION['id']);
 $isProductProvided = isset($_POST['product_id'])  && !empty($_POST['product_id']);
+$comment = htmlspecialchars($_POST['comment']);
+$isCommentProvided = isset($comment)  && !empty($comment);
 
 
 function setDateZone(){
@@ -10,19 +12,20 @@ function setDateZone(){
     return $today;
 }
 
-function addLike($mysqlConnection, $today){
-    $pdoStmnt = $mysqlConnection->prepare("INSERT INTO likes (user_id, product_id, up, created_at) 
+function addComment($mysqlConnection, $today, $comment){
+    $pdoStmnt = $mysqlConnection->prepare("INSERT INTO comments (user_id, product_id, comment, created_at) 
                                            VALUES (?,?,?,?) 
                                         ");
-    $isSuccess = $pdoStmnt->execute([$_SESSION['id'], $_POST["product_id"], 1, $today]);
+    $isSuccess = $pdoStmnt->execute([$_SESSION['id'], $_POST["product_id"], $comment, $today]);
     return $isSuccess;
 }
 
 if($isUserProvided && $isProductProvided) {	
+    
     include "../utils/connexion_bdd.php";
         
     $today = setDateZone();
-    $isSuccess = addLike($mysqlConnection, $today);
+    $isSuccess = addComment($mysqlConnection, $today, $comment);
     if (!$isSuccess) {
         header("Location: ../index.php"); 
     }else{
@@ -33,5 +36,3 @@ if($isUserProvided && $isProductProvided) {
 }
     
 ?>
-
-

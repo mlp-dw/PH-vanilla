@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : ven. 11 fév. 2022 à 15:37
+-- Généré le : mer. 23 fév. 2022 à 12:19
 -- Version du serveur : 5.7.33
--- Version de PHP : 7.4.19
+-- Version de PHP : 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -110,7 +110,9 @@ INSERT INTO `likes` (`id`, `user_id`, `product_id`, `up`, `comment`, `created_at
 (51, 1, 16, 1, '', '2022-02-11 10:39:03'),
 (52, 1, 16, 1, '', '2022-02-11 11:02:08'),
 (53, 1, 16, 1, '', '2022-02-11 11:51:07'),
-(54, 1, 2, 1, '', '2022-02-11 14:30:35');
+(54, 1, 2, 1, '', '2022-02-11 14:30:35'),
+(55, 1, 20, 1, '', '2022-02-14 09:52:31'),
+(56, 1, 19, 1, '', '2022-02-14 10:02:09');
 
 -- --------------------------------------------------------
 
@@ -219,7 +221,7 @@ ALTER TABLE `categorys`
 -- AUTO_INCREMENT pour la table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT pour la table `products`

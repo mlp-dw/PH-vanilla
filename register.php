@@ -2,7 +2,7 @@
 <?php include "./utils/alerts.php"?>
 
 <div class="form-signin m-3 d-flex justify-content-center ">
-    <form action="process/process_log.php" method="POST">
+    <form action="process/process_register.php" method="POST">
         <h1 class="h3 mb-3 fw-normal">Register</h1>
 
         <div class="m-2">

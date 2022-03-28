@@ -1,9 +1,9 @@
 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top my-auto">
     <div class="col-md-4 d-flex align-items-center justify-content-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-      <img src="./images/logo.jpg" alt="" width="30" height="auto" class="d-inline-block align-text-top">
+      <img src="./images/logo2.jpg" alt="" width="30" height="auto" class="d-inline-block align-text-top">
       </a>
-      <span class="text-muted">© 2022 Mathis Company, Inc</span>
+      <span class="text-muted">© 2022 Made with way too many headaches</span>
     </div>
 
     <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
@@ -26,10 +26,10 @@
   </footer>
 
 
-<script src="./js/refresh.js"></script>
-<script src="./js/filter_category.js"></script>
+<script src="./js/fetch_products.js"></script>
+<script src="./js/display_categories.js"></script>
 <script src="./js/search.js"></script>
-<script>refreshPopular()</script>
+<script>Popular()</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

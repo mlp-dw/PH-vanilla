@@ -1,8 +1,5 @@
 <?php
-// ON CONNECTE A LA BDD
 include "C:\laragon\www\product-hunt\utils\connexion_bdd.php";
-//include "D:/laragon/www/PRODUCT-HUNT-main/utils/connexion_bdd.php";
-
 
 // VOIR LES FICHIERS
 $seeData = $mysqlConnection->query("SELECT *
@@ -14,7 +11,7 @@ $files = $seeData->fetchAll();
 // SELCTION DES LIKES EN FONCTION DES ID PRODUIT
 for ($i=0; $i < count($files); $i++) { 
 	
-	$seeLikes = $mysqlConnection->query("SELECT up
+	$seeLikes = $mysqlConnection->query("SELECT *
 										 FROM likes
 										 WHERE product_id = ' ". $files[$i]["id"] ."'
 	");
@@ -26,8 +23,8 @@ for ($i=0; $i < count($files); $i++) {
 // SELCTION DES COMMENTS EN FONCTION DES ID PRODUIT
 for ($i=0; $i < count($files); $i++) { 
 	
-	$seeComments = $mysqlConnection->query("SELECT comment
-										 FROM likes
+	$seeComments = $mysqlConnection->query("SELECT *
+										 FROM comments
 										 WHERE product_id = ' ". $files[$i]["id"] ."'
 	");
 	$comments = $seeComments->fetchAll();
@@ -35,8 +32,7 @@ for ($i=0; $i < count($files); $i++) {
 	
 }
 
-
-	echo json_encode($files);
+echo json_encode($files);
 	
 	
 ?>
