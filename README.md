@@ -14,3 +14,5 @@
 - ajouter une fonction dislike
 - quand on est dans le filtre popularité, liker ne redirige pas sur la page d'acceuil (par défault la page des nouveauté)
 - 
+
+regarder
