@@ -1,4 +1,4 @@
-let divAPI = (info, showComment) => `   
+let divAPI = (info, showComment, countLike, countComment) => `   
 <div class="row my-3 post" data-bs-toggle="modal" data-bs-target="#modal-${info.id}"  id="myModal">
     <div class="modal modal-dialog modal-dialog-scrollable" id="modal-${info.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog overflow-auto">
@@ -105,7 +105,7 @@ function NewProduct() {
                 countLike = likesFilter.length;
                 countComment = commentsFilter.length;
 
-                api.innerHTML = divAPI(info, showComment);
+                api.innerHTML = divAPI(info,showComment, countLike, countComment);
                 divAPP.appendChild(api);
 
 
@@ -171,7 +171,7 @@ function Popular() {
                 countLike = likesFilter.length;
                 countComment = commentsFilter.length;
                 
-                api.innerHTML = divAPI(info, showComment);
+                api.innerHTML = divAPI(info,showComment, countLike, countComment);
                 divAPP.appendChild(api);
 
 
@@ -184,7 +184,7 @@ function Popular() {
         })              
     })
     .catch(function(err) {
-        console.log("erreur");
+        console.log(err);
     });
 }
 // //TOUTE LES SECONDES

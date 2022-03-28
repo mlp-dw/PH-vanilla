@@ -1,4 +1,16 @@
-function fetchProduct(){
+function filterComments(comments){
+    return comments.filter((comment) => {
+        return comment.comment !== ""; //1 tableau 2 le champs
+    });
+}
+
+function filterComments(comments){
+    return comments.filter((comment) => {
+        return comment.comment !== ""; //1 tableau 2 le champs
+    });
+}
+
+function searchProduct(){
     let data = new FormData();
     data.append('search', document.querySelector('#searchBar').value);
 
@@ -29,7 +41,7 @@ function fetchProduct(){
             countLike = likesFilter.length;
             countComment = commentsFilter.length;
     
-            searching.innerHTML = divAPI(info, showComment);
+            searching.innerHTML = divAPI(info,showComment, countLike, countComment);
                 divAPP.appendChild(searching);
     
     

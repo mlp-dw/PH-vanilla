@@ -32,7 +32,7 @@
 
         <div class="d-flex" id="search_form">
                 <input type="search" class="form-control" name="search" placeholder="Search..." id="searchBar" value="">
-                <button type="submit" class="btn btn-outline-dark" id="searchBTN" name="envoi" onclick="fetchProduct()">🔍</button>
+                <button type="submit" class="btn btn-outline-dark" id="searchBTN" name="envoi" onclick="searchProduct()">🔍</button>
         </div>
             
 
