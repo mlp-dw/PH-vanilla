@@ -23,13 +23,13 @@ function showCountLikes($mysqlConnection, $category, $i){
     return $likes;
 }
 
-function showCountComment($mysqlConnection, $category, $i){
-    $seeComments = $mysqlConnection->query("SELECT *
-                                         FROM comments
+function showCountDislikes($mysqlConnection, $category, $i){
+    $seeDislikes = $mysqlConnection->query("SELECT *
+                                         FROM dislikes
                                          WHERE product_id = ' ". $category[$i]["id"] ."'
                                         ");
-    $comments = $seeComments->fetchAll();
-    return $comments;
+    $dislikes = $seeDislikes->fetchAll();
+    return $dislikes;
 }
 
 if($isLanguageProvided){
@@ -42,10 +42,10 @@ if($isLanguageProvided){
         $category[$i]["likes"] = $likes;
     }
 
-    // SELCTION DES COMMENTS EN FONCTION DES ID PRODUIT
+    // SELCTION DES DILIKES EN FONCTION DES ID PRODUIT
     for ($i=0; $i < count($category); $i++) { 
-        $comments = showCountComment($mysqlConnection, $category, $i);
-        $category[$i]["comments"] = $comments;
+        $dislikes = showCountDislikes($mysqlConnection, $category, $i);
+        $category[$i]["dislikes"] = $dislikes;
     }
 
  	echo json_encode($category);

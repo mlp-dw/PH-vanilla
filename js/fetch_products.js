@@ -1,4 +1,4 @@
-let divAPI = (info, showComment, countLike, countComment) => `   
+let divAPI = (info, countLike, countDislike) => `   
 <div class="row my-3 post" data-bs-toggle="modal" data-bs-target="#modal-${info.id}"  id="myModal">
     <div class="modal modal-dialog modal-dialog-scrollable" id="modal-${info.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog overflow-auto">
@@ -12,13 +12,6 @@ let divAPI = (info, showComment, countLike, countComment) => `
                 <img src="${info.images}" class="img-fluid" alt="...">
                 </div>
                 <p class="">${info.description}</p>
-                
-                <div class="list-group position-relative h-auto overflow-auto" tabindex="0">
-                    <div class="list-group-item">
-                        <h6>user.name</h6>
-                        <p>${showComment}</p>
-                    </div>
-                </div>
             </div>
                         
             <div class="modal-footer">
@@ -31,12 +24,14 @@ let divAPI = (info, showComment, countLike, countComment) => `
                 </button>
             </form>
                 
-                
-                <button class="btn btn-success">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
-                        <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
-                        </svg> ${countComment}
+            <form action="./process/process_dislike.php" method="POST">    
+                <button type="submit" class="btn btn-success">
+                    <input type="hidden" name="product_id" value="${info.id}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-down" viewBox="0 0 16 16">
+                        <path d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856 0 .289-.036.586-.113.856-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a9.877 9.877 0 0 1-.443-.05 9.364 9.364 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964l-.261.065zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a8.912 8.912 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.224 2.224 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.866.866 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1z"/>
+                    </svg> ${countDislike}
                 </button>
+            </form>
             </div>
 
 
@@ -62,9 +57,9 @@ let divAPI = (info, showComment, countLike, countComment) => `
     </span>                    
 
     <span class="text-dark m-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
-        <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
-        </svg> ${countComment}
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-down" viewBox="0 0 16 16">
+        <path d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856 0 .289-.036.586-.113.856-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a9.877 9.877 0 0 1-.443-.05 9.364 9.364 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964l-.261.065zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a8.912 8.912 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.224 2.224 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.866.866 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1z"/>
+        </svg> ${countDislike}
     </span>
                         
 </div> 
@@ -75,9 +70,9 @@ function filtreLikes(likes){
         return like.like !== ""; 
     });
 }
-function filterComments(comments){
-    return comments.filter((comment) => {
-        return comment.comment !== ""; //1 tableau 2 le champs
+function filterDislikes(dislikes){
+    return dislikes.filter((dislike) => {
+        return dislike.dislike !== ""; //1 tableau 2 le champs
     });
 }
 
@@ -96,18 +91,17 @@ function NewProduct() {
                 
                 let api = document.createElement('div');
                 let likes = info.likes;
-                let comments = info.comments;
+                let dislikes = info.dislikes;
                 
                 // on affiche les likes existants
                 let likesFilter = filtreLikes(likes);
-                // on affiche les comments existants
-                let commentsFilter = filterComments(comments);
-                let showComment = commentsFilter.map(comment => comment["comment"])[0];
-                // on affiche le nombre de like / comment grace au .length
+                // on affiche les dislikes existants
+                let dislikesFilter = filterDislikes(dislikes);
+                // on affiche le nombre de like / dislike grace au .length
                 countLike = likesFilter.length;
-                countComment = commentsFilter.length;
+                countDislike = dislikesFilter.length;
 
-                api.innerHTML = divAPI(info,showComment, countLike, countComment);
+                api.innerHTML = divAPI(info, countLike, countDislike);
                 divAPP.appendChild(api);
 
 
@@ -128,13 +122,6 @@ function NewProduct() {
         console.log(err);
     });
 }
-
-// //TOUTE LES SECONDES
-//      setInterval(() => {
-//      NewProduct ('../process/process_show_products.php')
-//     }, 5000);
-
-    
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -162,18 +149,17 @@ function Popular() {
                 
                 let api = document.createElement('div');
                 let likes = info.likes;
-                let comments = info.comments;
+                let dislikes = info.dislikes;
                 
+                // on affiche les likes existants
                 let likesFilter = filtreLikes(likes);
-
-                // on affiche les comments existants
-                let commentsFilter = filterComments(comments);
-                let showComment = commentsFilter.map(comment => comment["comment"])[0];
-                // on affiche le nombre de like / comment grace au .length
+                // on affiche les dislikes existants
+                let dislikesFilter = filterDislikes(dislikes);
+                // on affiche le nombre de like / dislike grace au .length
                 countLike = likesFilter.length;
-                countComment = commentsFilter.length;
+                countDislike = dislikesFilter.length;
                 
-                api.innerHTML = divAPI(info,showComment, countLike, countComment);
+                api.innerHTML = divAPI(info, countLike, countDislike);
                 divAPP.appendChild(api);
 
 
@@ -189,7 +175,3 @@ function Popular() {
         console.log(err);
     });
 }
-// //TOUTE LES SECONDES
-//     setInterval(() => {
-//     Popular ('../process/process_show_products.php')
-//     }, 5000);

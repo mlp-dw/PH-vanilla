@@ -20,15 +20,15 @@ for ($i=0; $i < count($files); $i++) {
 	
 }
 
-// SELCTION DES COMMENTS EN FONCTION DES ID PRODUIT
+// SELCTION DES dislikes EN FONCTION DES ID PRODUIT
 for ($i=0; $i < count($files); $i++) { 
 	
-	$seeComments = $mysqlConnection->query("SELECT *
-										 FROM comments
+	$seeDislikes = $mysqlConnection->query("SELECT *
+										 FROM dislikes
 										 WHERE product_id = ' ". $files[$i]["id"] ."'
 	");
-	$comments = $seeComments->fetchAll();
-	$files[$i]["comments"] = $comments;
+	$dislikes = $seeDislikes->fetchAll();
+	$files[$i]["dislikes"] = $dislikes;
 	
 }
 

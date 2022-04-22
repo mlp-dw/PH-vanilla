@@ -1,12 +1,12 @@
-function filterComments(comments){
-    return comments.filter((comment) => {
-        return comment.comment !== ""; //1 tableau 2 le champs
+function filterDislikes(dislikes){
+    return dislikes.filter((dislike) => {
+        return dislike.dislike !== ""; //1 tableau 2 le champs
     });
 }
 
-function filterComments(comments){
-    return comments.filter((comment) => {
-        return comment.comment !== ""; //1 tableau 2 le champs
+function filterDislikes(dislikes){
+    return dislikes.filter((dislike) => {
+        return dislike.dislike !== ""; //1 tableau 2 le champs
     });
 }
 
@@ -29,19 +29,18 @@ function searchProduct(){
             
             let searching = document.createElement('div');
             let likes = info.likes;
-            let comments = info.comments;
+            let dislikes = info.dislikes;
                     
             // on affiche les likes existants
             let likesFilter = filtreLikes(likes);
-            // on affiche les comments existants
-            let commentsFilter = filterComments(comments);
-            let showComment = commentsFilter.map(comment => comment["comment"])[0];
-            // on affiche le nombre de like / comment grace au .length
+            // on affiche les dislikes existants
+            let dislikesFilter = filterDislikes(dislikes);
+            // on affiche le nombre de like / dislike grace au .length
 
             countLike = likesFilter.length;
-            countComment = commentsFilter.length;
+            countDislike = dislikesFilter.length;
     
-            searching.innerHTML = divAPI(info,showComment, countLike, countComment);
+            searching.innerHTML = divAPI(info, countLike, countDislike);
                 divAPP.appendChild(searching);
     
     
@@ -61,18 +60,3 @@ function searchProduct(){
         console.log(err);
     });
 }
-
-
-// AFFICHER LA RECHERCHE EN TEMPS REEL
-
-// document.addEventListener("DOMContentLoaded", fetchProduct())
-// let searchProduct = document.querySelector("#searchBar")   
-// searchProduct.addEventListener("input", e => {
-//     let element = e.target.info
-//     let newProduct = info.name.filter(product => product.includes(element))
-//     showProduct(newProduct)
-// })
-        
-    
-
-

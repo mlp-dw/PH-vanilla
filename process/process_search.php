@@ -35,13 +35,13 @@ function showCountLikes($mysqlConnection, $selected, $i){
     return $likes;
 }
 
-function showCountComment($mysqlConnection, $selected, $i){
-    $seeComments = $mysqlConnection->query("SELECT *
-                                         FROM comments
+function showCountDislikes($mysqlConnection, $selected, $i){
+    $seeDislikes = $mysqlConnection->query("SELECT *
+                                         FROM dislikes
                                          WHERE product_id = ' ". $selected[$i]["id"] ."'
                                         ");
-    $comments = $seeComments->fetchAll();
-    return $comments;
+    $dislikes = $seeDislikes->fetchAll();
+    return $dislikes;
 }
 
 if($isSearchProvided){
@@ -54,10 +54,10 @@ if($isSearchProvided){
         $selected[$i]["likes"] = $likes;
     }
 
-    // SELCTION DES COMMENTS EN FONCTION DES ID PRODUIT
+    // SELCTION DES DILSKES EN FONCTION DES ID PRODUIT
     for ($i=0; $i < count($selected); $i++) { 
-        $comments = showCountComment($mysqlConnection, $selected, $i);
-        $selected[$i]["comments"] = $comments;
+        $dislikes = showCountDislikes($mysqlConnection, $selected, $i);
+        $selected[$i]["dislikes"] = $dislikes;
     }
 
 	echo json_encode($selected);
@@ -70,10 +70,10 @@ if($isSearchProvided){
         $noSelection[$i]["likes"] = $likes;
     }
 
-    // SELCTION DES COMMENTS EN FONCTION DES ID PRODUIT
-    for ($i=0; $i < count($noSelection); $i++) { 
-        $comments = showCountComment($mysqlConnection, $noSelection, $i);
-        $noSelection[$i]["comments"] = $comments;
+    // SELCTION DES DILSKES EN FONCTION DES ID PRODUIT
+    for ($i=0; $i < count($selected); $i++) { 
+        $dislikes = showCountDislikes($mysqlConnection, $selected, $i);
+        $selected[$i]["dislikes"] = $dislikes;
     }
 
 	echo json_encode($noSelection);
