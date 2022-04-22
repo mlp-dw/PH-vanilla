@@ -70,10 +70,10 @@ if($isSearchProvided){
         $noSelection[$i]["likes"] = $likes;
     }
 
-    // SELCTION DES DILSKES EN FONCTION DES ID PRODUIT
-    for ($i=0; $i < count($selected); $i++) { 
-        $dislikes = showCountDislikes($mysqlConnection, $selected, $i);
-        $selected[$i]["dislikes"] = $dislikes;
+    // SELCTION DES COMMENTS EN FONCTION DES ID PRODUIT
+    for ($i=0; $i < count($noSelection); $i++) { 
+        $dislikes = showCountDislikes($mysqlConnection, $noSelection, $i);
+        $noSelection[$i]["dislikes"] = $dislikes;
     }
 
 	echo json_encode($noSelection);
