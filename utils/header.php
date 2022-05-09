@@ -23,7 +23,7 @@
                     <img src="./images/logo2.jpg" alt="" width="50" height="auto" class="d-inline-block align-text-top ">
                 </a>
             </div>
-            <h4 class="text-start my-auto"><a style="text-decoration: none;" class="link-dark" href="../product-hunt/index.php">Product hunt</a></h4>    
+            <h4 class="text-start my-auto"><a style="text-decoration: none;" class="link-dark" href="/">Product hunt</a></h4>    
         </div>
 
         <?php if(isset($_SESSION["pseudo"]))
