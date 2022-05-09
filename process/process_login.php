@@ -12,7 +12,7 @@ function createSession($user){
 }
 
 if($isPseudo && $isPassword){
-    include "../utils/connexion_bdd.php";
+    include __DIR__ . '/../utils/connexion_bdd.php';
      
     $pdoStmnt = $mysqlConnection->prepare("SELECT * FROM users WHERE pseudo = ? AND password = ?");
     $isSuccess = $pdoStmnt->execute([$pseudo, $password]);

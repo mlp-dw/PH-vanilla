@@ -19,7 +19,7 @@ function addDislike($mysqlConnection, $today){
 
 if($isUserProvided && $isProductProvided) {	
     
-    include "../utils/connexion_bdd.php";
+    include __DIR__ . '/../utils/connexion_bdd.php';
         
     $today = setDateZone();
     $isSuccess = addDislike($mysqlConnection, $today);
