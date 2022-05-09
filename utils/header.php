@@ -72,7 +72,7 @@
         }else{
         ?>
         <div class="my-auto">
-            <a href="/log.php" style="text-decoration: none;" class="btn btn-outline-dark"> Connectez-vous pour un meilleur expérience sur le site</a>
+            <a href="/log.php" style="text-decoration: none;" class="btn btn-outline-dark"> Connectez-vous pour une meilleure expérience sur le site</a>
         </div>
         <?php
         }
