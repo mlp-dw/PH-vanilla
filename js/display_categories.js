@@ -1,4 +1,4 @@
-fetch('/process/process_see_category.php')
+fetch('../process/process_see_category.php')
     .then(function (response){  
          return response.json();
         })       
@@ -30,7 +30,7 @@ function groupByLanguage(id){
     let data = new FormData();
     data.append("groupByLanguage",id);
     
-    fetch('/process/process_groupByLanguage.php', {
+    fetch('../process/process_groupByLanguage.php', {
         method: 'POST',
         body: data
     })
