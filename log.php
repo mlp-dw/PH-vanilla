@@ -25,10 +25,12 @@
         </form>
         <div class="card ms-3" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Bienvenue sur ce projet</h5>
-                <p class="card-text">Pour avec accès aux fonctionnalités du site, je vous invite à vous connecter</p>
-                <p class="btn btn-primary">id : visiteur</p>
-                <p class="btn btn-primary">mdp : visiteur</p>
+                <h5 class="card-title text-center">Bienvenue sur ce projet</h5>
+                <p class="card-text text-center">Pour avoir accès aux fonctionnalités du site, je vous invite à vous connecter.</p>
+                <div class="d-flex justify-content-center">
+                    <p class="btn btn-primary">id : visiteur</p>
+                    <p class="btn btn-primary">mdp : visiteur</p>
+                </div>
             </div>
         </div>
 </main>
