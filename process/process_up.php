@@ -19,7 +19,7 @@ function addLike($mysqlConnection, $today){
 }
 
 if($isUserProvided && $isProductProvided) {	
-    include "../utils/connexion_bdd.php";
+    include "./utils/connexion_bdd.php";
         
     $today = setDateZone();
     $isSuccess = addLike($mysqlConnection, $today);

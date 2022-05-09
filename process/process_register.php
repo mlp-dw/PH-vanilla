@@ -17,7 +17,7 @@ function createUser($mysqlConnection, $pseudo, $password){
 }
 
 if ($isPseudoProvided){ 
-    include "../utils/connexion_bdd.php";
+    include "./utils/connexion_bdd.php";
     
     $user = pseudoExist($mysqlConnection, $pseudo);  
     if($user){
