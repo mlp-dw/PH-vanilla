@@ -15,7 +15,7 @@ let divAPI = (info, countLike, countDislike) => `
             </div>
                         
             <div class="modal-footer">
-            <form action="./process/process_up.php" method="POST">
+            <form action="/process/process_up.php" method="POST">
                 <button type="submit" class="btn btn-success">
                     <input type="hidden" name="product_id" value="${info.id}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
@@ -24,7 +24,7 @@ let divAPI = (info, countLike, countDislike) => `
                 </button>
             </form>
                 
-            <form action="./process/process_dislike.php" method="POST">    
+            <form action="/process/process_dislike.php" method="POST">    
                 <button type="submit" class="btn btn-success">
                     <input type="hidden" name="product_id" value="${info.id}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-down" viewBox="0 0 16 16">
@@ -78,7 +78,7 @@ function filterDislikes(dislikes){
 
 function NewProduct() {
     
-    fetch('./process/process_show_products.php') 
+    fetch('/process/process_show_products.php') 
     .then(function (response){
         return response.json();
     })
@@ -128,7 +128,7 @@ function NewProduct() {
 
 function Popular() {
     
-    fetch('./process/process_show_products.php') 
+    fetch('/process/process_show_products.php') 
     .then(function (response){
         return response.json(); 
     })

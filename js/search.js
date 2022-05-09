@@ -14,7 +14,7 @@ function searchProduct(){
     let data = new FormData();
     data.append('search', document.querySelector('#searchBar').value);
 
-    fetch('./process/process_search.php', {
+    fetch('/process/process_search.php', {
         method: 'POST',
         body: data
     })
