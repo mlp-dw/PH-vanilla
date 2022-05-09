@@ -1,5 +1,5 @@
 <?php
-include "C:\laragon\www\product-hunt\utils\connexion_bdd.php";
+include __DIR__ . '/../utils/connexion_bdd.php';
 
 $isSearchProvided = isset($_POST['search']) && !empty($_POST['search']);
 

@@ -16,7 +16,7 @@ fetch('./process/process_see_category.php')
                    
     })
     .catch(function(err) {
-        console.log("erreur");
+        console.log("err");
     });
 
 
