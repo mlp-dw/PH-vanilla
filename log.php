@@ -2,7 +2,7 @@
 <?php include "utils/alerts.php";?>
 
 
-<main class="form-signin m-3 d-flex justify-content-center ">
+<main class="form-signin m-3 d-flex justify-content-around ">
         <form action="/process/process_login.php" method="POST">
 
             <h1 class="h3 mb-3 fw-normal">Connexion</h1>
