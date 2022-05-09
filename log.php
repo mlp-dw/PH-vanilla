@@ -2,8 +2,8 @@
 <?php include "utils/alerts.php";?>
 
 
-<main class="form-signin m-3 d-flex justify-content-around ">
-        <form action="/process/process_login.php" method="POST">
+<main class="form-signin m-3 d-flex justify-content-center ">
+        <form action="/process/process_login.php" method="POST" class="me-3">
 
             <h1 class="h3 mb-3 fw-normal">Connexion</h1>
 
@@ -23,7 +23,7 @@
             </div>
             
         </form>
-        <div class="card" style="width: 18rem;">
+        <div class="card ms-3" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Bienvenue sur ce projet</h5>
                 <p class="card-text">Pour avec accès aux fonctionnalités du site, je vous invite à vous connectez</p>
