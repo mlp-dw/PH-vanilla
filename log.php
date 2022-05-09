@@ -23,7 +23,15 @@
             </div>
             
         </form>
-    </main>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Bienvenue sur ce projet</h5>
+                <p class="card-text">Pour avec accès aux fonctionnalités du site, je vous invite à vous connectez</p>
+                <p class="btn btn-primary">id : visiteur</p>
+                <p class="btn btn-primary">mdp : visiteur</p>
+            </div>
+        </div>
+</main>
 
 
 <?php include "utils/footer.php";?>

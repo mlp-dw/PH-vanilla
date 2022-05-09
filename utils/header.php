@@ -69,7 +69,13 @@
             </div>
         </div>
         <?php 
-        } 
+        }else{
+        ?>
+        <div class="my-auto">
+            <a href="/log.php" style="text-decoration: none;" class="link-dark"> Connectez-vous pour un meilleur expérience sur le site</a>
+        </div>
+        <?php
+        }
         ?>
 
     </div>
